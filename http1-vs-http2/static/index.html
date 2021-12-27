@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>http1-vs-http2</title>
+    <style>
+      #card {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(19 * 16px);
+        margin: 0 auto;
+      }
+      #card img {
+        width: 16px;
+        height: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="card"></div>
+
+    <script>
+      const cardEle = document.getElementById('card')
+      let html = ''
+      for (let i = 0; i < 19; i++) {
+        for (let j = 0; j < 19; j++) {
+          html = html + `<img src="./images/tile-${i * 20 + j}.png">`
+        }
+      }
+      cardEle.innerHTML = html
+    </script>
+  </body>
+</html>
